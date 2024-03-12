@@ -10,17 +10,19 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
+import java.util.function.IntUnaryOperator;
+import java.util.function.Supplier;
 
+import static java.security.MessageDigest.getInstance;
 import static com.hankcs.hanlp.HanLP.extractKeyword;
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class SimHash {
     public static String getHash(String str) {
         try {
             // 这里使用了SHA-256获得hash值
-            MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
-            return new BigInteger(1, messageDigest.digest(str.getBytes(StandardCharsets.UTF_8))).toString(2);
+            return new BigInteger(1, getInstance("SHA-256").digest(str.getBytes(UTF_8))).toString(2);
         } catch (Exception e) {
-            e.printStackTrace();
             return str;
         }
     }
@@ -61,9 +63,7 @@ public class SimHash {
                     times.getAndIncrement();
                 });
         for (int j = 0; j < vector.length; j++) {
-            if(vector[j]<=0){
-                vector[j]=0;
-            }else vector[j]=1;
+            vector[j]=vector[j]<=0?0:1;
         }
         return vector;
     }
