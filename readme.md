@@ -185,9 +185,11 @@ public class IOUtils {
 
 ### **计算模块接口部分的性能**
 
-**![image-20240312224307128](C:\Users\86159\AppData\Roaming\Typora\typora-user-images\image-20240312224307128.png)**
+**![image-20240312224307128](image-20240312224307128.png)**
 
-**![image-20240312224338938](C:\Users\86159\AppData\Roaming\Typora\typora-user-images\image-20240312224338938.png)**
+**![image-20240312224338938](image-20240312224338938.png)**
+
+
 
 ## **计算模块部分异常处理说明**
 
