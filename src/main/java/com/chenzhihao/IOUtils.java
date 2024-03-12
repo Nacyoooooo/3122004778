@@ -5,15 +5,12 @@ import cn.hutool.core.io.file.FileWriter;
 
 public class IOUtils {
     public static String read(String filePath){
-        FileReader fileReader=new FileReader(filePath);
-        return fileReader.readString();
+        return new FileReader(filePath).readString();
     }
     public static void write(String filePath,String content){
-        FileWriter fileWriter = new FileWriter(filePath);
-        fileWriter.write(content);
+        new FileWriter(filePath).write(content);
     }
     public static void append(String filePath,String content){
-        FileWriter fileWriter = new FileWriter(filePath);
-        fileWriter.append(content+"\n");
+        new FileWriter(filePath).append(content+"\n");
     }
 }
