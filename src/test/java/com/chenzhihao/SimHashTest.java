@@ -1,5 +1,6 @@
 package com.chenzhihao;
 
+
 import org.junit.Test;
 
 public class SimHashTest {

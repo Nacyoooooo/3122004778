@@ -1,7 +1,7 @@
 package com.chenzhihao;
 
-import org.junit.Test;
 import com.chenzhihao.SimHash;
+import org.junit.Test;
 
 import static com.chenzhihao.IOUtils.read;
 import static com.chenzhihao.SimHash.getSimHash;

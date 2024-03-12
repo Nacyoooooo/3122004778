@@ -14,6 +14,6 @@ public class IOUtils {
     }
     public static void append(String filePath,String content){
         FileWriter fileWriter = new FileWriter(filePath);
-        fileWriter.append(content);
+        fileWriter.append(content+"\n");
     }
 }

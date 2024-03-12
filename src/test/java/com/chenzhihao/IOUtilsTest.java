@@ -1,6 +1,6 @@
 package com.chenzhihao;
 
-import com.chenzhihao.IOUtils;
+
 import org.junit.Test;
 
 public class IOUtilsTest {
